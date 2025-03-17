@@ -12,6 +12,7 @@ class New(models.Model):
     tags = models.ManyToManyField(Tag, related_name='news')
     image = models.ImageField(upload_to='news_images/')
     is_published = models.BooleanField(default=False)
+    published_at = models.BooleanField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
