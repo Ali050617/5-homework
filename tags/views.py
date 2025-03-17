@@ -8,6 +8,7 @@ class TagViewSet(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
     serializer_class = TagsSerializers
     pagination_class = TagsPagination
+    lookup_field = 'slug'
 
     def perform_create(self, serializer):
         serializer.save()
