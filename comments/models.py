@@ -8,6 +8,7 @@ class Comment(models.Model):
     author_email = models.EmailField()
     content = models.TextField(null=True, blank=True)
     is_approved = models.BooleanField(default=False)
+    approved_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

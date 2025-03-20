@@ -38,4 +38,3 @@ class NewsViewSet(viewsets.ModelViewSet):
             "is_published": news.is_published,
             "published_at": news.published_at,
         }, status=status.HTTP_200_OK)
-0
